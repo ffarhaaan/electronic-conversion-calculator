@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Electronics Conversion Calculator</title>
+   <link rel="stylesheet" href="classic.css">
+   
+   
+   
+   
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">ECC</a>
+	<ul>
+	<li><a href="#classic.html">Calculator</a></li>
+	<li><a href="#">Conversions</a></li>
+    <li><a href="index.html">Switch to Dark </a></li>
+	</ul>
+   </header>
+<section class="banner">
+  <h2>Welcome to Electronics Conversion Calculator.This online web-application is mainly designed to execute various electronic conversion & calculation.</h2>
+  <div class="grid-row">
+      <div class="item1">
+        <figure class="snip1220">
+        <img src="classic/inductance.png" alt="sample87"/>
+        
+        <figcaption>
+         <h5>Reactance(|X<sub>L</sub>|):</h5>
+        <input type="number" placeholder="Enter Reactance in mΩ" id="xl">
+		<h5>Frequency(F):</h5>
+		<input type="number" placeholder="Enter Frequency in Hz" id="fq">
+		
+		<button onclick="inductance()">Calculate</button><br>
+		<h5>Inductance</h5>
+		<input id="ind" type="text" readonly/>
+		<h5>Admittance</h5>
+		<input id="adm" type="text" readonly/><br>
+		<button onclick="reset()">Reset</button>
+		
+		
+        
+		
+        </figcaption>
+        </figure>
+		
+		
+        <figure class="snip1220">
+        <img src="classic/reactance.png" alt="sample87"/>
+        
+        <figcaption>
+         <h5>Inductance(L):</h5>
+        <input type="number" placeholder="Enter Inductance in uH" id="l">
+		<h5>Frequency(F):</h5>
+		<input type="number" placeholder="Enter Frequency in Hz" id="frq">
+		
+		<button onclick="reactance()">Calculate</button><br>
+		<h5>Reactance</h5>
+		<input id="rea" type="text" readonly/>
+		<h5>Admittance</h5>
+		<input id="admt" type="text" readonly/><br>
+		<button onclick="reset()">Reset</button>
+		
+		
+        
+		
+        </figcaption>
+        </figure>
+		
+		
+		
+		
+	
+          
+          
+		
+		
+        
+		
+        </figcaption>
+        </figure>
+        <figure class="snip1220">
+        <img src="classic/batterylife.png" alt="sample88"/>
+        <figcaption>
+         <h5>Battery Capacity:</h5>
+        <input type="number" placeholder="Enter Capacity in mAh" id="bc">
+		<h5>Device consumption:</h5>
+		<input type="number" placeholder="Enter Device consumption in mA" id="dc">
+		
+		<button onclick="batteryLife()">Calculate</button><br>
+		<h5>Battery Life</h5>
+		<input id="result" type="text" readonly/>
+		<button onclick="reset()">Reset</button>
+        </figcaption>
+        </figure>  
+      </div>
+      <div class="item5">
+        <figure class="snip1220">
+         <img src="classic/ohmslaw1.png" alt="sample88"/>
+        <figcaption>
+         <h5>Voltage:</h5>
+        <input type="number" placeholder="Enter Voltage in Volts" id="v">
+		<h5>Current:</h5>
+		<input type="number" placeholder="Enter Current in Ampere" id="c">
+		
+		<button onclick="classic/ohmslaw1()">Calculate</button><br>
+		<h5>Power</h5>
+		<input id="pow" type="text" readonly/>
+		<h5>Resistance</h5>
+		<input id="res" type="text" readonly/><br>
+		<button onclick="reset()">Reset</button>
+        </figcaption>
+        </figure>  
+		
+		
+        <figure class="snip1220">
+        <img src="classic/ohmslaw2.png" alt="sample88"/>
+        <figcaption>
+         <h5>Power:</h5>
+        <input type="number" placeholder="Enter Power in Watt" id="p">
+		<h5>Resistance:</h5>
+		<input type="number" placeholder="Enter Resistance in Ohm" id="r">
+		
+		<button onclick="ohmslaw2()">Calculate</button><br>
+		<h5>Voltage</h5>
+		<input id="vol" type="text" readonly/>
+		<h5>Current</h5>
+		<input id="cur" type="text" readonly/><br>
+		<button onclick="reset()">Reset</button>
+        </figcaption>
+        </figure>
+        <figure class="snip1220">
+       <img src="classic/tc.png" alt="sample88"/>
+        <figcaption>
+         <h5>Capacitance(C):</h5>
+        <input type="number" placeholder="Enter Capacitance in uF" id="cap">
+		<h5>Load Resistance(R):</h5>
+		<input type="number" placeholder="Enter Load Resistance in Ohm" id="lr">
+		
+		<button onclick="timeconstant()">Calculate</button><br>
+		<h5>Time Constant</h5>
+		<input id="tc" type="text" readonly/>
+		<button onclick="reset()">Reset</button>
+        </figcaption>
+        </figure>  
+       </div>
+	 </div>
+
+   
+</section>
+
+
+
+
+
+
+    
+   
+      
+	
+  
+<script type="text/javascript">	
+function reset(){
+     document.getElementById("bc").value="";
+     document.getElementById("dc").value="";
+     document.getElementById("result").value="";
+	 
+	 document.getElementById("xl").value="";
+     document.getElementById("fq").value="";
+     document.getElementById("ind").value="";
+	 document.getElementById("adm").value="";
+	 
+	 document.getElementById("l").value="";
+     document.getElementById("frq").value="";
+     document.getElementById("rea").value="";
+	 document.getElementById("admt").value="";
+	 
+	 document.getElementById("v").value="";
+     document.getElementById("c").value="";
+     document.getElementById("pow").value="";
+	 document.getElementById("res").value="";
+	 
+	 document.getElementById("p").value="";
+     document.getElementById("r").value="";
+     document.getElementById("vol").value="";
+	 document.getElementById("cur").value="";
+	 
+	  document.getElementById("cap").value="";
+     document.getElementById("lr").value="";
+     document.getElementById("tc").value="";
+}
+
+
+function batteryLife(){
+     var bc= Number(document.getElementById("bc").value);
+	 var dc= Number(document.getElementById("dc").value);
+	 var bl=bc / dc;
+	 var bl = Math.round(bl * 100) / 100;
+	 document.getElementById("result").value=bl+" hours";
+}
+
+function inductance(){
+     var xl = Number(document.getElementById("xl").value);
+	 var fq = Number(document.getElementById("fq").value);
+	 var ind = ((xl) / (2 * 3.1416 * fq));
+	 var ind = Math.round(ind * 100) / 100;
+	 var adm = 1/xl ;
+	 var adm = Math.round(adm * 100) / 100;
+	 document.getElementById("ind").value=ind+" H";
+	 document.getElementById("adm").value=adm+" S";
+}
+
+function reactance(){
+     var l = Number(document.getElementById("l").value);
+	 var frq = Number(document.getElementById("frq").value);
+	 var rea = (l * 2 * 3.1416 * frq);
+	 var rea = Math.round(rea * 100) / 100;
+	 var admt = 1/rea;
+	 var admt = Math.round(admt * 100) / 100;
+	 document.getElementById("rea").value=rea+" Ω";
+	 document.getElementById("admt").value=admt +" S";
+}
+
+
+
+function ohmslaw1(){
+     var v = Number(document.getElementById("v").value);
+	 var c = Number(document.getElementById("c").value);
+	 var pow = (v * c);
+	 var pow = Math.round(pow * 100) / 100;
+	 var res = v/c;
+	 var res = Math.round(res * 100) / 100;
+	 document.getElementById("pow").value=pow+" W";
+	 document.getElementById("res").value=res +" Ω";
+}
+
+function ohmslaw2(){
+     var p = Number(document.getElementById("p").value);
+	 var r = Number(document.getElementById("r").value);
+	 var vol = Math.sqrt(p * r);
+	 var vol = Math.round(vol * 100) / 100;
+	 var cur = Math.sqrt(p / r);
+	 var cur = Math.round(cur * 100) / 100;
+	 document.getElementById("vol").value=vol+" V";
+	 document.getElementById("cur").value=cur +" A";
+}
+
+
+function timeconstant(){
+     var cap = Number(document.getElementById("cap").value);
+	 var lr = Number(document.getElementById("lr").value);
+	 var tc= (cap * lr);
+	 var tc = Math.round(tc * 100) / 100;
+	 document.getElementById("tc").value=tc+" s";
+	 
+}
+
+
+
+
+
+
+
+window.addEventListener("scroll",function(){
+	     var header = document.querySelector("header");
+		 header.classList.toggle("sticky",window.scrollY > 0);
+		 })
+      $(".hover").mouseleave(
+          function () {
+           $(this).removeClass("hover");
+         }
+        );	 
+      
+</script>
+
+
+         		   
+	 
+</body>
+</html>			

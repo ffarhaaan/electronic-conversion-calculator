@@ -1,0 +1,8 @@
+Calculators
+------------------
+1. Ohm's Law-1(Calculate Power & Resistance)
+2. Ohm's Law-2(Calculate Current & Voltage)
+3. Battery Life Calculator
+4. Inductance Calculator
+5. Reactance Calculator
+6. Time Constant Calculator
